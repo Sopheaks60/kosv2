@@ -1,0 +1,35 @@
+<?php
+$lang['welcome']='ស្វាគមន៍';
+$lang['welcome_dashboard']='ស្វាគមន៍​មក​កាន់​​ប្រព័ន្ធ​គ្រប់​គ្រង​ការ​លក់, សូម​ចុច​មុខ​ងារ​ខាង​ក្រោម​ដើម្បី​ប្រតិបត្តិការ​៖';
+$lang['footer_visit']='សូម​ចូល​ទៅ​កាន់';
+$lang['footer_website']='គេហទំព័រ';
+$lang['footer_view_info']='ដើម្បី​មើល​ព័ត៌មាន​​ចុងក្រោយ​របស់​យើង​។';
+$lang['footer_using']='អ្នក​កំពុង​ប្រើ​ប្រាស់ ប្រព័ន្ធ​គ្រប់​គ្រង​ការ​លក់ ជំនាន់ ';
+$lang['search']='ស្វែង​រក';
+$lang['add']='ថែម';
+$lang['edit']='កែ';
+$lang['view']='មើល';
+$lang['save']='រក្សាទុក';
+$lang['delete']='លប់';
+$lang['barcode_label']='ស្លាក​បាកូដ';
+$lang['barcode_sheet']='តារាង​បាកូដ';
+$lang['logout']='ចាកចេញ';
+$lang['total_record'] = 'ទិន្នន័យ​សរុប​ចំនួន';
+$lang['pagination_first']='ដើម';
+$lang['pagination_last']='ចុង';
+$lang['pagination_next']='បន្ទាប់';
+$lang['pagination_prev']='ថយ';
+$lang['company']='ក្រុម​ហ៊ុន';
+$lang['code']='លេខ​កូដ​';
+$lang['name']='ឈ្មោះ';
+$lang['address']='អាស័យ​ដ្ឋាន';
+$lang['phone']='ទូរស័ព្ទ';
+$lang['email']='សារ';
+$lang['note']='សម្គាល់';
+$lang['cost']='ថ្លៃ​ដើម';
+$lang['price']='ថ្លៃ​លក់';
+$lang['qty']='ចំនួន';
+$lang['re-order']='កម្រិត​បាត​ស្តុក';
+$lang['note']='សម្គាល់';
+$lang['languages']='ភាសា';
+?>

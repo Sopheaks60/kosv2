@@ -1,0 +1,277 @@
+		<!-- BEGIN PAGE -->
+		<div id="main-content">
+			<!-- BEGIN PAGE CONTAINER-->
+			<div class="container-fluid">
+				<!-- BEGIN PAGE HEADER-->
+				<div class="row-fluid">
+					<div class="span12">
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+						<h3 class="page-title">
+							<?php echo $this->lang->line('employee');?>
+						</h3>
+						<ul class="breadcrumb">
+							<li><a href="<?php echo $this->config->base_url();?>index.php/homes"><i class="icon-home"></i></a><span class="divider">&nbsp;</span></li>
+							<li><a href="<?php echo $this->config->base_url();?>index.php/employees"><?php echo $this->lang->line('employee');?></a><span class="divider">&nbsp;</span></li>
+							<li><a href="#"><?php echo $this->lang->line('edit');?></a><span class="divider-last">&nbsp;</span></li>
+						</ul>
+						<!-- END PAGE TITLE & BREADCRUMB-->
+					</div>
+				</div>
+				<!-- END PAGE HEADER-->
+				<!-- BEGIN PAGE CONTENT-->
+				<div id="page" class="dashboard">
+     
+					<!-- BEGIN SQUARE STATISTIC BLOCKS-->
+                    <div class="square-state">
+                        <div class="row-fluid">
+				<div class="widget">
+				        <div class="widget-title">
+				            <h4><i class="icon-reorder"></i><?php echo $this->lang->line('edit').$this->lang->line('employee');?></h4>
+				            <span class="tools">
+				                <a href="javascript:;" class="icon-chevron-down"></a>
+				                <a href="javascript:;" class="icon-remove"></a>
+				            </span>
+				        </div>
+					<div class="widget-body">
+					<?php
+						if($id >= 1){
+							foreach($emp as $rows){
+								echo form_open('employees/save');
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('name'),
+													'name',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'name',
+														'placeholder'=>'សន​ ចរិយា',
+														'value'=>$rows->name)
+													);
+										echo '</div></div>';
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('input_username'),
+													'input_username',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'username',
+														'placeholder'=>'test',
+														'value'=>$rows->username)
+													);
+										echo '</div></div>';
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('input_password'),
+													'input_password',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'password',
+														'placeholder'=>'**********',
+														'value'=>$rows->password)
+													);
+										echo '</div></div>';
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('phone'),
+													'customer_phone',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'phone',
+														'placeholder'=>'012 812 812',
+														'value'=>$rows->phone)
+													);
+										echo '</div></div>';
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('email'),
+													'customer_email',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'email',
+														'placeholder'=>'test@gmail.com',
+														'value'=>$rows->email)
+													);
+										echo '</div></div>';
+
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('address'),
+													'address',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'address',
+														'placeholder'=>'Phnom Penh',
+														'value'=>$rows->address)
+													);
+										echo '</div></div>';
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('languages'),
+													'languages',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'lang',
+														'placeholder'=>'khmer',
+														'value'=>$rows->lang)
+													);
+											//echo form_dropdown('lang', array('khmer'=>'Khmer','english'=>'English'), $rows->lang);
+										echo '</div></div>';
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('note'),
+													'note',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'note',
+														'placeholder'=>'Note',
+														'value'=>$rows->note)
+													);
+										echo '</div></div>';
+
+										echo form_submit(array(
+													'name'=>'submit',
+													'id'=>'submit',
+													'value'=>$this->lang->line('edit'),
+													'class'=>' btn btn-primary')
+												);		
+								echo form_close();
+							}
+						}else{
+							echo form_open('employees/save');
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('name'),
+													'name',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'name',
+														'placeholder'=>'សន​ ចរិយា',
+														'value'=>'')
+													);
+										echo '</div></div>';
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('input_username'),
+													'input_username',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'username',
+														'placeholder'=>'test',
+														'value'=>'')
+													);
+										echo '</div></div>';
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('input_password'),
+													'input_password',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'password',
+														'placeholder'=>'*********',
+														'value'=>'')
+													);
+										echo '</div></div>';
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('phone'),
+													'phone',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'phone',
+														'placeholder'=>'012 812 812',
+														'value'=>'')
+													);
+										echo '</div></div>';
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('address'),
+													'address',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'address',
+														'placeholder'=>'Phnom Penh',
+														'value'=>'')
+													);
+										echo '</div></div>';
+
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('languages'),
+													'languages',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'lang',
+														'placeholder'=>'khmer',
+														'value'=>'')
+													);
+										echo '</div></div>';
+
+										echo '<div class="form-group">';
+										echo form_label($this->lang->line('note'),
+													'note',
+													array('class'=>'col-sm-3 col-md-3 col-lg-2 control-label ')
+												);
+										echo '<div class="col-sm-9 col-md-9 col-lg-10">';
+											echo form_input(array(
+														'name'=>'note',
+														'placeholder'=>'test',
+														'value'=>'')
+													);
+										echo '</div></div>';
+
+									echo form_submit(array(
+												'name'=>'submit',
+												'id'=>'submit',
+												'value'=>$this->lang->line('add'),
+												'class'=>' btn btn-primary')
+											);		
+							echo form_close();
+						}
+
+					?>
+				</div>
+                        </div>
+
+                    </div>
+				</div>
+				<!-- END PAGE CONTENT-->
+			</div>
+			<!-- END PAGE CONTAINER-->
+		</div>
+		<!-- END PAGE -->
+	</div>
+	<!-- END CONTAINER -->
+
+
+
+
+
+
+
+

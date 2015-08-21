@@ -1,0 +1,7 @@
+<?php
+$lang['setting_title']='បញ្ជី​ក្រុម​ទំនិញ';
+$lang['setting_item_per_page']='​ចំនួន​​ទិន្នន័យក្នុង​មួយទំព័រ';
+$lang['shop_name']='ឈ្មោះ​ហាង';
+$lang['shop_address']='អាស័យដ្ឋាន';
+$lang['shop_contact']='ទំនាក់​ទំនង';
+?>

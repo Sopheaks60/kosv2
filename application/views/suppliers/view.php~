@@ -1,0 +1,52 @@
+		<div id="content" class="clearfix ">
+
+<div id="content-header" class="hidden-print">
+	<h1><i class="icon fa fa-table"></i> <?php echo $this->lang->line('supplier');?></h1>
+</div>
+
+<div id="breadcrumb" class="hidden-print">
+		<a href="<?php echo $this->config->base_url();?>index.php/suppliers"><i class="fa fa-home"></i> <?php echo $this->lang->line('dashboard');?> </a><a class="current" href="<?php echo $this->config->base_url();?>index.php/suppliers"> <?php echo $this->lang->line('supplier');?> </a></div>
+<div class="clear"></div>
+
+<div class="pull-right">
+		<div class="row">
+		</div>
+	</div>
+	<div class="row ">
+	</div>
+	<input type="text" name="select_inventory" value="" id="select_inventory" style="display:none">	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="widget-box">
+					<div class="widget-title">
+						<span class="icon">
+							<i class="fa fa-th"></i>
+						</span>
+						<h5><?php echo $this->lang->line('add').' '.$this->lang->line('supplier');?></h5>
+
+					</div>
+					<div class="widget-content nopadding table_holder table-responsive">
+					<br/>
+					<?php
+							foreach($supplier as $rows){
+
+										echo '<div style="padding-left:30px;">';
+										echo '<span class="col-sm-3 col-md-3 col-lg-2 control-label "><b>'.$this->lang->line('name').'  </b></span> : '.$rows->supplier_contact.'<hr/>';
+										echo '<span class="col-sm-3 col-md-3 col-lg-2 control-label "><b>'.$this->lang->line('company').'  </b></span> : '.$rows->supplier_company.'<hr/>';
+										echo '<span class="col-sm-3 col-md-3 col-lg-2 control-label "><b>'.$this->lang->line('address').'  </b></span> : '.$rows->supplier_address.'<hr/>';
+										echo '<span class="col-sm-3 col-md-3 col-lg-2 control-label "><b>'.$this->lang->line('phone').'  </b></span> : '.$rows->supplier_phone.'<hr/>';
+										echo '<span class="col-sm-3 col-md-3 col-lg-2 control-label "><b>'.$this->lang->line('email').'  </b></span> : '.$rows->supplier_email.'<hr/>';
+										echo '<span class="col-sm-3 col-md-3 col-lg-2 control-label "><b>'.$this->lang->line('note').'  </b></span> : '.$rows->supplier_note.'<hr/>';
+										echo '<div>';
+
+							}
+
+					?>
+					<br/>				
+ 					</div>		
+ 				</div>
+			</div>
+		</div>
+	</div>
+
+

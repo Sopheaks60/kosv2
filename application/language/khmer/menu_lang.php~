@@ -1,0 +1,13 @@
+<?php
+$lang['customer']='អតិថិជន';
+$lang['supplier']='អតិថិជន';
+$lang['item']='ទំនិញ';
+$lang['item_kit']='កញ្ចប់​ទំនិញ';
+$lang['employee']='បុគ្គលិក';
+$lang['giftcard']='កាត​កាដូ';
+$lang['report']='របាយការណ៍';
+$lang['sale']='លក់';
+$lang['purchase']='ទិញ';
+$lang['setting']='កំណត់';
+$lang['setting']='កំណត់';
+?>

@@ -1,0 +1,114 @@
+
+		<!-- BEGIN PAGE -->
+		<div id="main-content">
+			<!-- BEGIN PAGE CONTAINER-->
+			<div class="container-fluid">
+				<!-- BEGIN PAGE HEADER-->
+				<div class="row-fluid">
+					<div class="span12">
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+						<h3 class="page-title">
+							<?php echo $this->lang->line('sale');?>
+						</h3>
+						<ul class="breadcrumb">
+							<li><a href="<?php echo $this->config->base_url();?>index.php/homes"><i class="icon-home"></i></a><span class="divider">&nbsp;</span></li>
+							<li><a href="<?php echo $this->config->base_url();?>index.php/sales""><?php echo $this->lang->line('sale');?></a><span class="divider-last">&nbsp;</span></li>
+						</ul>
+						<!-- END PAGE TITLE & BREADCRUMB-->
+					</div>
+				</div>
+				<!-- END PAGE HEADER-->
+				<!-- BEGIN PAGE CONTENT-->
+				<div id="page" class="dashboard">
+					<!-- BEGIN SQUARE STATISTIC BLOCKS-->
+				<div class="square-state">
+					<div class="row-fluid">
+						<div class="responsive span8" data-tablet="span8 fix-margin" data-desktop="span8">
+							<!-- BEGIN CALENDAR PORTLET-->
+							<div class="widget">
+								<div class="widget-title">
+									<h4><i class="icon-shopping-cart"></i> Cart</h4>
+									
+								</div>
+								<div class="widget-body">
+									<form>
+										<input type="text" name="item_id" placeholder="Scan Barcode">
+										<input type="hidden">
+									</form>
+									<table class="table table-striped table-bordered myTable" data-page-length='25'>
+										<thead>
+											<tr>
+												<th>Action</th>
+												<th>Barcode</th>
+												<th>Name</th>
+												<th>Current Stock</th>
+												<th>Price</th>
+												<th>Qty</th>
+												<th>Amount</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><a href="#" class="btn mini black"><i class="icon-trash"></i></a></td>
+												<td>236498237432</td>
+												<td>Angkor</td>
+												<td>10</td>
+												<td>0.5</td>
+												<td>3</td>
+												<td>1.5</td>
+											</tr>
+											<tr>
+												<td><a href="#" class="btn mini black"><i class="icon-trash"></i></a></td>
+												<td>930487592345</td>
+												<td>Cambodia</td>
+												<td>10</td>
+												<td>0.5</td>
+												<td>3</td>
+												<td>1.5</td>
+											</tr>
+
+											<tr>
+												<td colspan="6">Total</td>
+												<td>3$</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- END CALENDAR PORTLET-->
+						</div>
+					<div class="responsive span4" data-tablet="span4 fix-margin" data-desktop="span4">
+					<!-- BEGIN TODO_LIST PORTLET-->
+					<div class="widget">
+						<div class="widget-title">
+							<h4><i class="icon-briefcase"></i> Customer</h4>
+						</div>
+						<div class="widget-body">
+							<form>
+								<input type="text" name="item_id" placeholder="Customer Name">
+								<input type="hidden">
+							</form>
+							<h5>Seng Sopheak  <a href="#" class="btn mini black"><i class="icon-trash"></i></a></h5>
+						</div>
+					</div>
+					<div class="widget">
+						<div class="widget-title">
+							<h4><i class="icon-check"></i> Payment</h4>
+							
+						</div>
+						<div class="widget-body">
+							<p>asldhaskjdhaskljdhlkasd</p>
+						</div>
+					</div>
+				<!-- END TODO_LIST PORTLET-->
+				</div>
+			</div>
+		</div>
+				<!-- END PAGE CONTENT-->
+			</div>
+			<!-- END PAGE CONTAINER-->
+		</div>
+		<!-- END PAGE -->
+	</div>
+	<!-- END CONTAINER -->
+

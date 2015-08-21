@@ -1,0 +1,10 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
+
+class Sale_lib {
+
+	public function get_item(){
+		
+	}
+}
+
+/* End of file Someclass.php */

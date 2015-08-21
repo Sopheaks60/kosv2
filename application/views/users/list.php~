@@ -1,0 +1,104 @@
+		<div id="content" class="clearfix ">
+
+<script type="text/javascript">
+	$(document).ready(function() 
+	{ 
+	    enable_row_selection();
+	    enable_search('<?php echo site_url("customers/suggest");?>',<?php echo json_encode($this->lang->line("search"));?>);
+	}); 
+</script>
+
+<div id="content-header" class="hidden-print">
+	<h1><i class="icon fa fa-table"></i> <?php echo $this->lang->line('customer');?></h1>
+</div>
+
+<div id="breadcrumb" class="hidden-print">
+		<a href="<?php echo $this->config->base_url();?>index.php/customers"><i class="fa fa-home"></i> <?php echo $this->lang->line('dashboard');?> </a><a class="current" href="<?php echo $this->config->base_url();?>index.php/customers"> <?php echo $this->lang->line('customer');?> </a></div>
+<div class="clear"></div>
+
+<div class="pull-right">
+		<div class="row">
+				<div class="col-md-12 center" style="text-align: center;">					
+				<div class="btn-group  ">
+					<a href="<?php echo $this->config->base_url();?>index.php/customers/edit/0" class="btn btn-medium btn-primary" title="<?php echo $this->lang->line('new_customer');?>">
+						<i class="fa fa-pencil   hidden-lg fa fa-2x tip-bottom" data-original-title="<?php echo $this->lang->line('new_customer');?>"></i> 
+						<span class="visible-lg"><?php echo $this->lang->line('new_customer');?></span>
+					</a>															
+				</div>
+		 </div>
+		</div>
+	</div>
+	<div class="row ">
+			<div class="row ">
+		<?php
+			echo '<div style="margin-left: 15px;">'.form_open('customers/index');
+			echo '<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>';
+			echo form_input(array(
+						'name'=>'search',
+						'id'=>'search',
+						'placeholder'=>$this->lang->line('customer_search'),
+						)
+					);
+			echo form_submit(
+					array(
+						'name'=>'submitf',
+						'value'=>$this->lang->line('search'),
+						 'class'=>'btn btn-primary btn-sm',					
+					)
+				);
+			echo form_close().'</div>';
+		?>
+	</div>
+	<input type="text" name="select_inventory" value="" id="select_inventory" style="display:none">	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="widget-box">
+					<div class="widget-title">
+						<span class="icon">
+							<i class="fa fa-th"></i>
+						</span>
+						<h5><?php echo $this->lang->line('customer_title');?></h5>
+						<span title="" class="label label-info tip-left" data-original-title="<?php echo $this->lang->line('total_record').' '.$total_customer;?>"><?php echo $total_customer;?></span>
+					</div>
+					<div class="widget-content nopadding table_holder table-responsive">
+						<table class="table tablesorter table-bordered table-striped table-hover" id="sortable_table">
+							<thead>
+								<tr>
+									<th><?php echo $this->lang->line('code');?></th>
+									<th><?php echo $this->lang->line('name');?></th>
+									<th><?php echo $this->lang->line('company');?></th>
+									<th><?php echo $this->lang->line('address');?></th>
+									<th><?php echo $this->lang->line('phone');?></th>
+									<th><?php echo $this->lang->line('email');?></th>
+									<th><?php echo $this->lang->line('edit');?></th>
+								</tr>
+							</thead>
+
+							<tbody>
+							<?php
+								foreach($customer_list as $rows){
+									echo '<tr style="cursor: pointer;">';
+										echo "<td width='10%' style='font-size: 11px;'>CUS0000".$rows->customer_id."</td>";	
+										echo "<td width='10%' style='font-size: 11px;'>".$rows->customer_name."</td>";
+										echo "<td width='10%' style='font-size: 11px;'>".$rows->customer_company."</td>";
+										echo "<td width='20%' style='font-size: 11px;'>".$rows->customer_address."</td>";
+										echo "<td width='20%' style='font-size: 11px;'>".$rows->customer_phone."</td>";
+										echo "<td width='10%' style='font-size: 11px;'>".$rows->customer_email."</td>";
+										echo "<td width='10%'  class='rightmost'  style='font-size: 11px;'>";
+											echo "<a href='".$this->config->base_url()."index.php/customers/edit/".$rows->customer_id."'><button class='btn btn-primary btn-sm'>".$this->lang->line('edit').'</button></a> ';	
+											echo "<a href='".$this->config->base_url()."index.php/customers/delete/".$rows->customer_id."'><button class='btn btn-danger btn-sm'>".$this->lang->line('delete').'</button></a>';
+										echo "</td>";
+									echo '</tr>';
+										}
+									?>
+							</tbody>
+						</table>
+						<?php echo $paginations;?>			
+ 					</div>		
+				
+ 				</div>
+			</div>
+		</div>
+	</div>
+
+

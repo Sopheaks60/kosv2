@@ -1,0 +1,15 @@
+<?php
+$lang['dashboard']='ទំព័រ​ដើម';
+$lang['customer']='អតិថិជន';
+$lang['category']='ក្រុមទំនិញ';
+$lang['unit']='ខ្នាត';
+$lang['supplier']='អ្នក​ផ្គត់​ផ្គង់';
+$lang['item']='ទំនិញ';
+$lang['delivery']='ដឹក​ជញ្ជូន';
+$lang['employee']='បុគ្គលិក';
+$lang['giftcard']='កាត​កាដូ';
+$lang['report']='របាយការណ៍';
+$lang['sale']='លក់';
+$lang['purchase']='ទិញ';
+$lang['setting']='កំណត់';
+?>
